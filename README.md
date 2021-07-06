@@ -1,2 +1,2 @@
 # biaspoint.de
-Homepage for the band biaspoint
+Homepage for the band biaspoint.
