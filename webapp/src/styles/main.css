@@ -1,9 +1,19 @@
+:root {
+  --light-text-color: #c1c0c0;
+  --dark-text-color: #323232;
+  --link-color: #aaccee;
+}
+
 body {
-  background-image: url('../images/bg-home.jpg');
+  background-image: url('../images/solln-ost-bw.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
   min-height: 100vh;
+}
+
+h2 {
+  background-color: #cfcfcfbb;
 }
 
 footer {
@@ -30,27 +40,27 @@ footer {
 }
 
 .headline-light-bg {
-  color: #434334;
+  color: var(--dark-text-color);
 }
 
 .sub-headline-light-bg {
-  color: #868561;
+  color: var(--dark-text-color);
 }
 
 .headline-dark-bg {
-  color: #f1f5f5;
+  color: var(--light-text-color);
 }
 
 .text-dark-bg {
-  color: #f1f5f5;
+  color: var(--light-text-color);
 }
 
 .text-light-bg {
-  color: #7c7c7e;
+  color: var(--dark-text-color);
 }
 
 a {
-  color: #43477e;
+  color: var(--link-color);
   text-decoration: underline;
 }
 
