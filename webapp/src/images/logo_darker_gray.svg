@@ -3,7 +3,9 @@
 <svg width="100%" height="100%" viewBox="0 0 208 208" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
     <g transform="matrix(1,0,0,1,-826,-399.507)">
         <g transform="matrix(1.25,0,0,1.25,-20,-33.9926)">
-            <circle cx="760" cy="430" r="80" style="fill:rgb(255,255,255);stroke:rgb(16,16,16);stroke-width:6.4px;"/>
+            <circle cx="760" cy="430" r="80" style="fill:rgb(255,255,255);stroke:rgb(16,16,16);stroke-width:6.4px;">
+                <animate attributeName="fill" values="#BF5C12;#722A28;#AAC194;#BF5C12;" dur="10s" repeatCount="indefinite" />
+            </circle>
         </g>
         <g transform="matrix(1,0,0,1,110,123.124)">
             <path d="M761.859,335.4L834.077,453.744" style="fill:none;stroke:rgb(16,16,16);stroke-width:24px;"/>
