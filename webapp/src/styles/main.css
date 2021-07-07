@@ -12,8 +12,21 @@ body {
   min-height: 100vh;
 }
 
+h1,
 h2 {
-  background-color: #cfcfcfbb;
+  font-family: 'Audiowide', cursive;
+  color: #fff;
+  /*color: rgb(216,103,17);*/
+  /*background-color: #cfcfcfbb;*/
+  background-color: rgba(0, 0, 0, 0.4);
+  text-transform: lowercase;
+  padding: 10px;
+}
+
+p {
+  color: #0e0e0e;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 10px;
 }
 
 footer {
@@ -56,7 +69,7 @@ footer {
 }
 
 .headline-light-bg {
-  color: var(--dark-text-color);
+  /*  color: var(--dark-text-color);*/
 }
 
 .sub-headline-light-bg {
