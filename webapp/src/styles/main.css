@@ -33,6 +33,22 @@ footer {
 #home {
   position: relative;
   min-width: 100vw;
+  text-align: center;
+}
+
+#home img {
+  display: block;
+  margin: 0 auto;
+}
+
+#home .band-logo {
+  width: 400px;
+  margin-top: 40px;
+}
+
+#home .band-name {
+  max-width: 800px;
+  margin-top: 40px;
 }
 
 .credits {
