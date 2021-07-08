@@ -16,36 +16,9 @@
 - `npm run lint` - check with code linter
 - `npm run test` - start the test runner
 
-## Colors
+## Color Palette
 
-**not really used**
-
-The theme colors are taken from the background image and are as follows:
-
-### Porcelain, #F1F5F5
-
-Light text and headlines on dark background.
-
-    .headline-dark-bg
-    .text-dark-bg
-
-### Kelp, #434334
-
-Headlines on light background.
-
-    .headline-light-bg
-
-### Clay Creek, #868561
-
-Sub headlines on light background.
-
-    .headline-light-bg
-
-### Jumbo, #7C7C7E
-
-Text on light background.
-
-![palette](./docs/palette.png)
+See the variable declarations at the top of the file `src/styles/main.css`.
 
 ## Milligram CSS Reference
 
