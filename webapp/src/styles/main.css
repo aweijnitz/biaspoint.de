@@ -110,6 +110,23 @@ a {
   width: 25%;
   max-width: 5vw;
   margin-top: 40px;
+  margin-left: 20px;
+}
+
+@media (max-width: 400px) {
+  #galleryHeader {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  #galleryHeader .band-name {
+    max-width: 45vw;
+  }
+
+  #galleryHeader .band-logo {
+    max-width: 10vw;
+    margin-left: 10px;
+  }
 }
 
 /* Larger than mobile screen */
