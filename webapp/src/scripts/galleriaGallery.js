@@ -49,11 +49,19 @@ const getImageUrls = (container, elementName, folderUrl, suffix) => {
       const imageUrls = []
       $(data)
         .find('a:contains(' + suffix + ')')
-        .each(function () {
-          let fileName = this.href
-            .replace(window.location.host, '')
-            .replace('http://', '')
-            .replace('https://', '')
+        .each(function (index, element) {
+          let fileName = $(element).attr('href')
+          if (!fileName.startsWith('/images/galleries'))
+            fileName = folderUrl + $(element).attr('href')
+
+          /*
+        let fileName =
+          this.href
+          .replace(window.location.host, '')
+          .replace('http://', '')
+          .replace('https://', '')
+          +/
+           */
           imageUrls.push(fileName)
           // DEBUG: $(".directorySlider").append("<img src='" + filename + "'>");
         })
@@ -72,16 +80,16 @@ const initializeGalleries = (container, folderUrl) => {
   $.ajax({
     url: folderUrl,
     success: function (data) {
+      //console.log(data);
       const galleryMatch = 'gallery_'
       $(data)
         .find('a:contains(' + galleryMatch + ')')
-        .each(function () {
-          let galleryFolderUrl = this.href
-            .replace(window.location.host, '')
-            .replace('http://', '')
-            .replace('https://', '')
-          console.log('this.href', this.href)
-          console.log('galleryFolderUrl', galleryFolderUrl)
+        .each(function (index, element) {
+          let galleryFolderUrl = $(element).attr('href')
+          if (!galleryFolderUrl.startsWith('/images/galleries'))
+            galleryFolderUrl = '/images/galleries/' + $(element).attr('href')
+
+          //console.log('galleryFolderUrl', galleryFolderUrl)
           const elementName = 'slider' + galleryFolderUrl.replaceAll('/', '-')
           getImageUrls(container, elementName, galleryFolderUrl, 'jpg')
         })
