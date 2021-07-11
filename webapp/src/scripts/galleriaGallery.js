@@ -12,43 +12,19 @@ const galleryContainer = '.galleryContainer'
 const initGallery = (container, element, imageUrls) => {
   // Not sure Galleria can handle more than one instance on a page,
   // so creating a new function scope.
-  ;(function isolateScope ($, container, element, imageUrls) {
+  (function isolateScope($, container, element, imageUrls) {
     $(container).append(
-      "<div class='gallery " + element + "' id='" + element + "'></div>",
-    )
-
-    // Helper used by the gallery to load images
-    var getImages = function (from, to) {
-      var data = []
-      for (var i = from; i <= Math.min(to, imageUrls.length - 1); i++) {
-        data.push({
-          image: imageUrls[i],
-        })
-      }
-      return data
-    }
-
+      "<div class='gallery galleria " + element + "' id='" + element + "'></div>",
+    );
+    imageUrls.forEach(imgUrl => {
+      $('#' + element).append(
+        "<img class='galler galleryImage' src='" + imgUrl + "'/>"
+      )
+    });
     Galleria.loadTheme(
       '/scripts/lib/galleria-1.6.1/themes/classic/galleria.classic.min.js',
     )
-    /* Load with the first 2 images */
-    Galleria.run(element, {
-      dataSource: getImages(1, 2),
-    })
-    Galleria.ready(function (options) {
-      var galleria = this
-      galleria.bind('loadstart', function (e) {
-        /* after an image starts load, check to see
-           how close we are to loading more images */
-        var size = galleria.getDataLength()
-        if (e.index + 2 > size && size < imageUrls.length) {
-          galleria.push(
-            getImages(size + 1, Math.min(size + 2, imageUrls.length - 1)),
-          )
-        }
-      })
-    })
-    $(element).galleria()
+    $('#' + element).galleria();
   })($, container, element, imageUrls)
 }
 

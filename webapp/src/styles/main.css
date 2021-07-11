@@ -12,6 +12,10 @@ body {
   min-height: 100vh;
 }
 
+.gallery {
+  height: 500px;
+}
+
 h1,
 h2 {
   font-family: 'Audiowide', cursive;
