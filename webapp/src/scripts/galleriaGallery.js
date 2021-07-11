@@ -12,19 +12,23 @@ const galleryContainer = '.galleryContainer'
 const initGallery = (container, element, imageUrls) => {
   // Not sure Galleria can handle more than one instance on a page,
   // so creating a new function scope.
-  (function isolateScope($, container, element, imageUrls) {
+  ;(function isolateScope ($, container, element, imageUrls) {
     $(container).append(
-      "<div class='gallery galleria " + element + "' id='" + element + "'></div>",
-    );
+      "<div class='gallery galleria " +
+        element +
+        "' id='" +
+        element +
+        "'></div>",
+    )
     imageUrls.forEach(imgUrl => {
       $('#' + element).append(
-        "<img class='galler galleryImage' src='" + imgUrl + "'/>"
+        "<img class='galleryImage' src='" + imgUrl + "'/>",
       )
-    });
+    })
     Galleria.loadTheme(
       '/scripts/lib/galleria-1.6.1/themes/classic/galleria.classic.min.js',
     )
-    $('#' + element).galleria();
+    $('#' + element).galleria()
   })($, container, element, imageUrls)
 }
 
@@ -37,6 +41,7 @@ const initGallery = (container, element, imageUrls) => {
  * @param suffix
  */
 const getImageUrls = (container, elementName, folderUrl, suffix) => {
+  console.log('gallery folder', folderUrl)
   console.log('Creating gallery for ', elementName)
   $.ajax({
     url: folderUrl,
@@ -75,6 +80,8 @@ const initializeGalleries = (container, folderUrl) => {
             .replace(window.location.host, '')
             .replace('http://', '')
             .replace('https://', '')
+          console.log('this.href', this.href)
+          console.log('galleryFolderUrl', galleryFolderUrl)
           const elementName = 'slider' + galleryFolderUrl.replaceAll('/', '-')
           getImageUrls(container, elementName, galleryFolderUrl, 'jpg')
         })
