@@ -24,7 +24,7 @@
     "start": "run-p watch serve",
     "build": "rimraf dist && ncp src dist && ncp bower_components dist/lib",
     "watch": "onchange src/* -- npm run build",
-    "serve": "browser-sync --no-notify start -s dist -f dist",
+    "serve": "browser-sync --directory --no-notify start -s dist -f dist",
     "test": "npm run build",
     "lint": "prettier-standard --check",
     "postinstall": "bower i",

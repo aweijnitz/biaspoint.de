@@ -12,6 +12,10 @@ body {
   min-height: 100vh;
 }
 
+.gallery {
+  height: 500px;
+}
+
 h1,
 h2 {
   font-family: 'Audiowide', cursive;
@@ -25,7 +29,7 @@ h2 {
 
 p {
   color: #0e0e0e;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.75);
   padding: 10px;
 }
 
@@ -92,6 +96,37 @@ footer {
 a {
   color: var(--link-color);
   text-decoration: underline;
+}
+
+/* GALLERY  PAGE */
+
+#galleryHeader .band-name {
+  width: 75%;
+  max-width: 25vw;
+  margin-top: 40px;
+}
+
+#galleryHeader .band-logo {
+  width: 25%;
+  max-width: 5vw;
+  margin-top: 40px;
+  margin-left: 20px;
+}
+
+@media (max-width: 400px) {
+  #galleryHeader {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  #galleryHeader .band-name {
+    max-width: 45vw;
+  }
+
+  #galleryHeader .band-logo {
+    max-width: 10vw;
+    margin-left: 10px;
+  }
 }
 
 /* Larger than mobile screen */
